@@ -13,8 +13,8 @@ install_github("adarapv/gistools")
 library(gistools)
 ``` 
 # Example usage
-What follows is some simple examples of how this package can be used to analyse spatial landscape and biodiversity data. All the examples below make use
-of the Corine land cover dataset for the Province of Caceres. 
+What follows is some simple examples of how this package can be used to handle spatial data and calculate a variety of landscape metrics. All the examples below make use
+of the Corine Land Cover dataset (reference). 
 
 ## Required Packages
 
@@ -25,9 +25,10 @@ library(SDMTools)
 
 
 ## Calculate landscape metrics around buffers of a given size
-The function `buffercreate()` `betabas()` calculates buffers for sites, matrix corine dataset (reference), landscape metrics fragstats (McGarigal & Marks, 1995). 
+The function `buffercreate()` create buffers of given size around a set of sites. 
+and calculates a bunch of landscape metrics as implemented in fragstats (McGarigal & Marks, 1995). 
 
-Example using the corine data for the province of Caceres (Spain):
+Example using the Corine Land Cover data (reference) for the province of Caceres (Spain):
 
 ```r
 #' Create buffers and extract a series of landscape metrics
