@@ -38,14 +38,13 @@ Example using the corine data for the province of Caceres (Spain):
 
 
 # Plot Corine Land Cover for the province of Caceres
-plot(corine,legend=FALSE,box=FALSE,axes=FALSE,main="Corine Land Cover 100-province of Caceres")
+plot(corine,legend=FALSE,box=FALSE,axes=FALSE,main="Corine Land Cover 100x100m resolution")
 
 # Display 20 random sites
 points(sites[,1],sites[,2],col="black",pch="+",cex=1.5)
-points(sites[,1],sites[,2],col="black",pch=16,cex=1.5)
 
 ```
-![Graphical output](caceres.png)
+![Graphical output](corine2.png)
 
 ```r
 
@@ -60,7 +59,6 @@ buffresults<-buffercreate(inrast=corine,inpoint=sites,bufsize=5000,rastcell=100)
 ... Calculating buffer for site 6  ...
 
 # Examine results for first 8 columns
-
 head(buffresults)[1:8]
         x       y class n.patches total.area prop.landscape patch.density total.edge
 1 2860658 2001861    18         1      10000   0.0001296849  1.296849e-08        400
