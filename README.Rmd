@@ -48,10 +48,27 @@ points(sites[,1],sites[,2],col="black",pch=16,cex=1.5)
 ![Graphical output](caceres.png)
 
 ```r
+
+# Calculate landscape metrics for a sample of 20 sites (buffer size 5km)
 buffresults<-buffercreate(inrast=corine,inpoint=sites,bufsize=5000,rastcell=100)
 
-head(buffresults)
+... Calculating buffer for site 1  ...
+... Calculating buffer for site 2  ...
+... Calculating buffer for site 3  ...
+... Calculating buffer for site 4  ...
+... Calculating buffer for site 5  ...
+... Calculating buffer for site 6  ...
 
+# Examine results for first 8 columns
+
+head(buffresults)[1:8]
+        x       y class n.patches total.area prop.landscape patch.density total.edge
+1 2860658 2001861    18         1      10000   0.0001296849  1.296849e-08        400
+2 2860658 2001861    22         9   39000000   0.5057709765  1.167164e-07      85000
+3 2860658 2001861    23         1    2250000   0.0291790948  1.296849e-08      18200
+4 2860658 2001861    26         9    6450000   0.0836467384  1.167164e-07      50800
+5 2860658 2001861    28         3   28510000   0.3697315523  3.890546e-08      88000
+6 2860658 2001861    29         1     280000   0.0036311762  1.296849e-08       4800
 ```
 
 References
