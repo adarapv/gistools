@@ -20,8 +20,7 @@ of the publicly available dataset published in John T. Longino and Robert K. Col
 
 ```{r packages, message=FALSE}
 library(raster);library(rgeos)
-# for plotting
-library(ggplot2)
+library(SDMTools)
 ```
 
 
@@ -37,24 +36,23 @@ Example using the corine data for the province of Caceres (Spain):
 #'@group=character vector indicating column name for elevational gradient IDs 
 #'(if there is more than one study area)
 
-plot(corine)
 
-head(sites)
-        x       y
-1 2863458 1994061
-2 2997558 2028661
-3 2939758 2017261
-4 2998958 2013061
-5 2981058 1978261
-6 3011358 1995061
+# Plot Corine Land Cover for the province of Caceres
+plot(corine,legend=FALSE,box=FALSE,axes=FALSE,main="Corine Land Cover 100-province of Caceres")
 
+# Display 20 random sites
+points(sites[,1],sites[,2],col="black",pch="+",cex=1.5)
 points(sites[,1],sites[,2],col="black",pch=16,cex=1.5)
 
 ```
 ![Graphical output](caceres.png)
 
+```r
+buffresults<-buffercreate(inrast=corine,inpoint=sites,bufsize=5000,rastcell=100)
 
-curr<-buffercreate(inrast=corine,inpoint=sites,bufsize=5000,rastcell=100)
+head(buffresults)
+
+```
 
 References
 
