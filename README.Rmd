@@ -1,7 +1,7 @@
 # gistools
 *Adhara Pardo* (adharapv@gmail.com) 
 
-An R package for analysing spatial ecological data. This package is meant to provide a collection of self-written functions for the analyses of biodiversity data in relation to landscape characteristics (including GBI, green and blue infrastructures).
+An R package for analysing spatial ecological data. This package is meant to provide a collection of self-written functions for spatial data processing.
 
 The package can be installed by typing:
 
@@ -14,7 +14,7 @@ library(gistools)
 ``` 
 # Example usage
 What follows is some simple examples of how this package can be used to handle spatial data and calculate a variety of landscape metrics. All the examples below make use
-of the Corine Land Cover dataset (reference). 
+of the Corine Land Cover dataset (Bossard et al., 2000). 
 
 ## Required Packages
 
@@ -25,10 +25,9 @@ library(SDMTools)
 
 
 ## Calculate landscape metrics around buffers of a given size
-The function `buffercreate()` create buffers of given size around a set of sites. 
-and calculates a bunch of landscape metrics as implemented in fragstats (McGarigal & Marks, 1995). 
+The function `buffercreate()` create buffers of given size around a set of sites and calculates a series of landscape metrics as implemented in fragstats (McGarigal & Marks, 1995). 
 
-Example using the Corine Land Cover data (reference) for the province of Caceres (Spain):
+Example using the Corine Land Cover data (Bossard et al., 2000) for the province of Caceres (Spain):
 
 ```r
 #' Create buffers and extract a series of landscape metrics
@@ -72,6 +71,8 @@ head(buffresults)[1:8]
 ```
 
 References
+
+Bossard, M., Feranec, J., & Otahel, J. (2000). CORINE land cover technical guide: Addendum 2000.
 
 McGarigal, K., & Marks, B. J. (1995). FRAGSTATS: spatial pattern analysis program for quantifying landscape structure.
 
