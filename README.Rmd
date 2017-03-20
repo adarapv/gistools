@@ -51,7 +51,7 @@ head(sites)
 points(sites[,1],sites[,2],col="black",pch=16,cex=1.5)
 
 ```
-![Graphical output](corine2.png)
+![Graphical output](caceres.png)
 
 
 curr<-buffercreate(inrast=corine,inpoint=sites,bufsize=5000,rastcell=100)
