@@ -1,7 +1,7 @@
 # gistools
 *Adhara Pardo* (adharapv@gmail.com) 
 
-An R package for analysing species diversity patterns along elevational gradients. This package is meant to provide a collection of self-written functions for the analyses of elevational diversity patterns.
+An R package for analysing spatial ecological data. This package is meant to provide a collection of self-written functions for the analyses of biodiversity data in relation to landscape characteristics (including GBI, green and blue infrastructures).
 
 The package can be installed by typing:
 
