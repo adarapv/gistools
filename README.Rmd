@@ -14,7 +14,7 @@ library(gistools)
 ``` 
 # Example usage
 What follows is some simple examples of how this package can be used to analyse spatial landscape and biodiversity data. All the examples below make use
-of the publicly available dataset published in John T. Longino and Robert K. Colwell. 2011. Density compensation, species composition, and richness of ants on a neotropical elevational gradient. Ecosphere 2:art29.
+of the Corine land cover dataset for the Province of Caceres. 
 
 ## Required Packages
 
@@ -25,16 +25,17 @@ library(SDMTools)
 
 
 ## Calculate landscape metrics around buffers of a given size
-The function `buffercreate()` `betabas()` calculates buffers for sites, matrix corine dataset (reference), landscape metrics fragstats (reference). 
+The function `buffercreate()` `betabas()` calculates buffers for sites, matrix corine dataset (reference), landscape metrics fragstats (McGarigal & Marks, 1995). 
 
 Example using the corine data for the province of Caceres (Spain):
 
 ```r
-#' Partition beta diversity into richhness and replacement components (Carvalho et al. 2012)
-#'@indat=name of dataframe containing species incidence data 
-#'@alt=character vector indicating column name for altitude values
-#'@group=character vector indicating column name for elevational gradient IDs 
-#'(if there is more than one study area)
+#' Create buffers and extract a series of landscape metrics
+#' Input is a raster and a matrix of with site coordinates
+#' @inrast = input raster
+#' @inpoint = column containing species names 
+#' @bufsize = buffer radius size
+#' @rastcell= cell size of the raster
 
 
 # Plot Corine Land Cover for the province of Caceres
@@ -71,6 +72,5 @@ head(buffresults)[1:8]
 
 References
 
-Baselga, A. (2010) Partitioning the turnover and nestedness components of beta diversity. 
-Global Ecology and Biogeography, 19, 134143.
+McGarigal, K., & Marks, B. J. (1995). FRAGSTATS: spatial pattern analysis program for quantifying landscape structure.
 
